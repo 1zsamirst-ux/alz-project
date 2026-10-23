@@ -1,0 +1,403 @@
+:root {
+  --navy: #101c35;
+  --burgundy: #792e49;
+  --background: #f8f8fa;
+  --text: #202536;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background: white;
+}
+
+.logo {
+  color: var(--navy);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a,
+#contact a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  min-height: 680px;
+  padding: 80px 8%;
+  background:
+    radial-gradient(
+      circle at 75% 50%,
+      rgba(75, 63, 130, 0.2),
+      transparent 38%
+    ),
+    var(--navy);
+  color: white;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.hero-visual img {
+  display: block;
+  width: 115%;
+  max-width: 850px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  transform-origin: center;
+  animation: brainFloat 6s ease-in-out infinite;
+}
+
+
+.eyebrow {
+  color: #d7a6b6;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  max-width: 650px;
+  font-size: clamp(38px, 4.2vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  margin: 24px 0;
+}
+
+.intro {
+  max-width: 620px;
+  color: #d9deea;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 22px;
+  background: var(--burgundy);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.section {
+  padding: 70px 12%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  color: var(--navy);
+  font-size: 32px;
+}
+
+footer {
+  padding: 28px 8%;
+  background: var(--navy);
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 60px 8%;
+  }
+
+  .hero-visual img {
+    max-width: 420px;
+  }
+
+  .section {
+    padding: 50px 8%;
+  }
+}
+
+.hero-visual img {
+  max-width: 420px;
+filter: drop-shadow(0 0 35px rgba(70, 100, 255, 0.18));
+ 
+}
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 70px 8%;
+  }
+
+  .section {
+    padding: 50px 8%;
+
+/* Research section */
+
+.research-section {
+  max-width: none;
+  padding: 100px 8%;
+  background: #f7f8fb;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.section-label {
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin: 18px 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.section-description {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #626b7d;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.research-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 32px;
+  background: white;
+  border: 1px solid #e6e9f0;
+  border-radius: 16px;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(16, 28, 53, 0.08);
+}
+
+.card-number {
+  color: #8a91a2;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 26px 0 18px;
+  border-radius: 12px;
+  background: #f2e8ed;
+  color: var(--burgundy);
+  font-size: 27px;
+}
+
+.research-card h3 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.research-card p {
+  margin: 0 0 24px;
+  color: #626b7d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.card-tag {
+  margin-top: auto;
+  color: var(--burgundy);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 800px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-card {
+    min-height: 260px;
+  }
+
+  .research-section {
+    padding: 70px 8%;
+  }
+}
+
+  }
+
+/* About ALZ Project */
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 8%;
+  background: var(--navy);
+  color: white;
+}
+
+.about-content {
+  max-width: 620px;
+}
+
+.about-content .section-label {
+  color: #d7a6b6;
+}
+
+.about-content h2 {
+  margin: 24px 0;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.about-description {
+  color: #e0e5ef;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about-note {
+  margin-top: 24px;
+  padding-left: 18px;
+  border-left: 2px solid var(--burgundy);
+  color: #bfc9dc;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-principles {
+  display: flex;
+  flex-direction: column;
+}
+
+.principle {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.principle:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.principle span {
+  color: #d7a6b6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.principle h3 {
+  margin: 12px 0 8px;
+  font-size: 21px;
+}
+
+.principle p {
+  margin: 0;
+  color: #bfc9dc;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 70px 8%;
+  }
+}
+
+@keyframes brainFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1.08);
+    filter: drop-shadow(0 0 25px rgba(65, 150, 255, 0.16));
+  }
+
+  50% {
+    transform: translateY(-14px) scale(1.12);
+    filter: drop-shadow(0 0 45px rgba(100, 90, 255, 0.32));
+  }
+}
+

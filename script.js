@@ -57,7 +57,7 @@ scene.add(rimLight);
   const loader = new GLTFLoader();
 
   loader.load(
-    "./assets/brain.glb",
+    "brain.glb",
     (gltf) => {
       brain = gltf.scene;
 
